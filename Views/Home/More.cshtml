@@ -1,0 +1,196 @@
+﻿<body>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .container {
+                position: relative;
+                text-align: center;
+                color: white;
+            }
+
+            .top-left {
+                position: absolute;
+                text-align: left;
+                top: 8px;
+                left: 16px;
+            }
+
+            /* Top right text */
+            .top-right {
+                position: absolute;
+                text-align: left;
+                top: 8px;
+                right: 16px;
+            }
+            /* Bottom right text */
+            .bottom-right {
+                position: absolute;
+                bottom: 8px;
+                right: 16px;
+            }
+
+            .centered {
+                position: absolute;
+                top: 55%;
+                left: 48%;
+                transform: translate(-50%, -50%);
+            }
+
+            .bottom-left {
+                position: absolute;
+                bottom: 8px;
+                left: 16px;
+            }
+        </style>
+    </head>
+    <div class="container">
+        @*<img src="https://sat02pap002files.storage.live.com/y4m-GmSkECVRKaiVtt7aj9FtI741TdBg4gasIzwezn3Dly8AbE8f6MlTODDM6JgqPRukaO6IzJa51uJtA36OEYyMMuXfxFFu_ZZRDHyZWkQxfm2qOVvSLUNFZCZPora9_ORvzs4uZCEgG8fs70Mh3s3_JKkzZWuQXsx-DZPTSejXGeqQCmm6XiDFFXv7hJgT0sm?width=1696&height=1007&cropmode=none" alt="Snow" style="width:100%;">*@
+        @*<img src="https://sat02pap002files.storage.live.com/y4md1P063NnjvRBndQdYiKgkszBOpR4QdYA8pixMkyDQbv6OubzeDROncK6CxfIli2VlD2xbn1giKszEPddXbKRx7ARFDeXErp_1KIg_szLfdMz19DZO6wqpFN1QvHdYqePEx3q6gZaA6nrzOH8breWnWXVZln373Pk3bxykGqDrvUMDfB1_voyY-EGLuU2gKgi?width=4256&height=2832&cropmode=none" alt="Snow" style="width:100%;">>*@
+        @*<img src="https://sat02pap002files.storage.live.com/y4m79naTfrmVDCb33FuQvKA_2mwmC7tr2SGH5Qg-aba1dP9Hokf1o3o8pfSWvhZ_2hkqbBOPinX6bZBmzsUjiRvllWmnkhN5t4Gfz1aXaN3xtF6VDxpihbymcntH8HqWtXa0IXcSHcPM6bC5Bkfq13Zbmz3820yWV32N7DNf5zcXQ-MOIKd2__EZZw1x91eDtkZ?width=950&height=585&cropmode=none" alt="Snow" style="width:100%;">*@
+        @*<img src="https://tetrion.com/skycam/current.jpg?fbclid=IwAR3rDYeF8DigbALmEyVgMzfqJL6y2QWlGaluPZbYPkn20O459EjNvKt7zmg" alt="Snow" style="width:100%;">*@
+        <img src="https://sat02pap002files.storage.live.com/y4maKDeVi1NgSW-9qtsuQWUVEm2Js47sA7hWathSgCfZq8RGXmrSF3s-8sML8KqpLIacJwLBxI5tjf32IGhoIxScW6pWJLT5fSziirRnrwgxz3W3DILhy8Pofgr0LCbEGKOt3Oze-D7H-Y6zRBYj0sly8_jNxGC8yPWGe0a6n-FkJ3r2WRWb16rZGzGzSLqCG_G?width=1444&height=895&cropmode=none" alt="Snow" style="width:100%;">
+
+        <div class="top-left">
+            @*<br>&ensp;&ensp;&ensp;Temperature: @ViewBag.Temp&#0176&ensp;&ensp;&ensp;&ensp;&ensp;
+        <br>Pressure: @ViewBag.Pres - @ViewBag.Trnd&ensp;&ensp;&ensp;&ensp;&ensp;
+        <br>UV: @ViewBag.UV&ensp;&ensp;&ensp;&ensp;&ensp;
+        <br>Brightness: @ViewBag.Bright&ensp;&ensp;&ensp;&ensp;&ensp;
+        <br>Solar Radiation: @ViewBag.Rad
+        <br>Wind Speed Avg: @ViewBag.Wind
+        <br>Wind Direction: @ViewBag.WindowDC
+        <br>Wind Gust: @ViewBag.Gust*@
+
+            <table>
+                @*<tr>
+            <td>Temperature</td>
+            <td> @ViewBag.Temp</td>
+        </tr>*@
+                <tr>
+                    <td>Pressure</td>
+                    <td>@ViewBag.Pres - @ViewBag.Trnd</td>
+                </tr>
+                <tr>
+                    <td>UV Index</td>
+                    <td>@ViewBag.UV</td>
+                </tr>
+                <tr>
+                    <td>Brightness</td>
+                    <td>@ViewBag.Bright lux</td>
+                </tr>
+                <tr>
+                    <td>Radiation</td>
+                    <td>@ViewBag.Rad W/m2</td>
+                </tr>
+                <tr>
+                    <td>Wind Speed Avg</td>
+                    <td>@ViewBag.Wind</td>
+                </tr>
+                <tr>
+                    <td>Wind Direction</td>
+                    <td>@ViewBag.WindowDC</td>
+                </tr>
+
+                <tr>
+                    <td>Wind Gust</td>
+                    <td>@ViewBag.Gust</td>
+                </tr>
+                <tr>
+                    <td>. </td>
+
+                </tr>
+                <tr>
+                    <td>. </td>
+
+                </tr>
+
+
+                <tr>
+                    <td>Rain Today: </td>
+                    <td> @ViewBag.Rain</td>
+                </tr>
+                <tr>
+                    <td>Rain Minutes: </td>
+                    <td>@ViewBag.RainPM</td>
+                </tr>
+                <tr>
+                    <td>Lightning Strikes: </td>
+                    <td>@ViewBag.LgtCnt3hr</td>
+                </tr>
+                <tr>
+                    <td>Lightning Distance: </td>
+                    <td>@ViewBag.LgtDstm</td>
+                </tr>
+                <tr>
+                    <td>Rain Yesterday: </td>
+                    <td>@ViewBag.RainY</td>
+                </tr>
+
+            </table>
+
+
+        </div>
+        <div class="top-right">
+            @*<br>Rain Today: @ViewBag.Rain
+            <br>Rain Minutes Today: @ViewBag.RainPM
+            <br>Lightning Message: @ViewBag.LgtDstm
+            <br>Rain Yesterday: @ViewBag.RainY
+            <br>Rain Minutes Yesterday: @ViewBag.RainPMY
+            <br>Lightning Strikes last hour: @ViewBag.LgtCnt1hr
+            <br>Lightning Strikes last 3 hours: @ViewBag.LgtCnt3hr*@
+
+        </div>
+
+        <div class="centered">
+            <h1 style="font-size:6em; ">  @ViewBag.Temp&#0176</h1>
+
+            <p style="line-height:200%">&ensp;</p>
+            <h2>  Humidity: @ViewBag.Hum% <br>Feels Like: @ViewBag.Feel&#0176</h2>
+
+
+        </div>
+        <div class="bottom-left">Powered by Weatherflow Tempest</div>
+
+
+    </div>
+
+    <div class=Section1>
+
+        @*        <p class=MsoNormal align=center style='text-align:center'>
+                <span>
+
+                    <img src="https://sat02pap002files.storage.live.com/y4m98IBwSToFKPP3dT0RZCJqCBBr85FBfxyTF9BgQFLyi1H8itVTfzzhe3gk5CoFZA6V7Z28n2b466aA-FK5WzEhL3yUQSWm3XGeoLyTr3Qc19dleXRcjngighB9At9r5N2Q3i94cWnIshcTf8P4LWDqjViQrE2p3bPwengtSG7vG3OlRS2kKiWl6qWk_3lOg_1?width=1200&height=450&cropmode=none" width="2104" height="105" />            </span>
+            </p>*@
+
+        <p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+
+        <h1>
+
+            @ViewBag.Temp&#0176
+
+        </h1>
+
+        @*<h1 align=center style='text-align:center'>
+                Lantana Weather <o:p></o:p>
+            </h1>
+
+            <h2 align=left style='text-align:center'>Temperature: @ViewBag.Temp      Humidity: @ViewBag.Hum% </h2>
+            <h2 align=right style='text-align:center'>Feels Like: @ViewBag.Feel      Barameteric Presure: @ViewBag.Pres</h2>
+
+            <p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>*@
+
+
+
+        @*<p class=MsoNormal align=center style='text-align:center'>
+                <span>
+                    <img src="https://sat02pap002files.storage.live.com/y4m98IBwSToFKPP3dT0RZCJqCBBr85FBfxyTF9BgQFLyi1H8itVTfzzhe3gk5CoFZA6V7Z28n2b466aA-FK5WzEhL3yUQSWm3XGeoLyTr3Qc19dleXRcjngighB9At9r5N2Q3i94cWnIshcTf8P4LWDqjViQrE2p3bPwengtSG7vG3OlRS2kKiWl6qWk_3lOg_1?width=1200&height=450&cropmode=none" />
+                </span>
+            </p>*@
+
+    </div>
+
+</body>
+
+
+

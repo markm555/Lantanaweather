@@ -1,0 +1,104 @@
+﻿
+
+
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .container {
+                position: relative;
+                text-align: center;
+                color: white;
+            }
+
+            .top-left {
+                position: absolute;
+                text-align: left;
+                top: 8px;
+                left: 16px;
+                color: green;
+
+            }
+
+            /* Top right text */
+            .top-right {
+                position: absolute;
+                text-align: left;
+                top: 8px;
+                right: 16px;
+            }
+            /* Bottom right text */
+            .bottom-right {
+                position: absolute;
+                bottom: 8px;
+                right: 16px;
+            }
+
+            .centered {
+                position: absolute;
+                top: 55%;
+                left: 48%;
+                transform: translate(-50%, -50%);
+            }   
+            .top-centered{
+                background-color:black;
+                position: absolute;
+                top: 15%;
+                left: 10%;
+                transform: translate(-5%, -50%);
+            }
+            .bottom-left {
+                position: absolute;
+                bottom: 8px;
+                left: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            @*<img src="https://sat02pap002files.storage.live.com/y4mu3w5G-qpol8jCG8JrYIikc7BorzPjxVkxPdCyElPBnxe-WP2vV5R2-ElyEMJSTjxiIXJXJJA1d1lS5oPFlO6QrJx9Ui70U3gu-Ez4oq2Iq7ScmUCnPOmk_3Zu2cR3qnupGa6pBXpuYXKqnDoARwPxFWimQWNF9H6aEYxlrVP5X3vabWRrf6RjVGDkccDW1ke?width=930&height=600&cropmode=none" alt="Snow" style="width:100%;">*@
+            @*<img src="https://sat02pap002files.storage.live.com/y4md1P063NnjvRBndQdYiKgkszBOpR4QdYA8pixMkyDQbv6OubzeDROncK6CxfIli2VlD2xbn1giKszEPddXbKRx7ARFDeXErp_1KIg_szLfdMz19DZO6wqpFN1QvHdYqePEx3q6gZaA6nrzOH8breWnWXVZln373Pk3bxykGqDrvUMDfB1_voyY-EGLuU2gKgi?width=4256&height=2832&cropmode=none" alt="Snow" style="width:100%;">>*@
+            @*<img src="https://sat02pap002files.storage.live.com/y4maKDeVi1NgSW-9qtsuQWUVEm2Js47sA7hWathSgCfZq8RGXmrSF3s-8sML8KqpLIacJwLBxI5tjf32IGhoIxScW6pWJLT5fSziirRnrwgxz3W3DILhy8Pofgr0LCbEGKOt3Oze-D7H-Y6zRBYj0sly8_jNxGC8yPWGe0a6n-FkJ3r2WRWb16rZGzGzSLqCG_G?width=1444&height=895&cropmode=none" alt="Snow" style="width:100%;">*@
+            @*<img src="https://tetrion.com/skycam/current.jpg?fbclid=IwAR3rDYeF8DigbALmEyVgMzfqJL6y2QWlGaluPZbYPkn20O459EjNvKt7zmg" alt="Snow" style="width:100%;">*@
+
+            <div class="top-left">
+                @*<h3>Notice:  Tempest replacement unit arrived and has been installed.  All measurments are now accurate </h3>*@
+            </div>
+
+            <div class="top-right">
+            </div>
+
+            <div class="centered">
+                <h1 style="font-size:6em; ">  @ViewBag.Temp&#0176</h1>
+
+                @*<p style="line-height:200%">&ensp;</p>*@
+                <h2>  Humidity: @ViewBag.Hum% <br>Feels Like: @ViewBag.Feel&#0176 </h2>
+                <h2>  Humidity: @ViewBag.Hum% <br>Feels Like: @ViewBag.Feel&#0176 </h2>
+                @if (@ViewBag.Rain > 0)
+                {
+                    <h1>Rain Today: @ViewBag.Rain"</h1>;
+                }
+
+            </div>
+
+            <div class="top-centered">
+                <h1 style="color:red"> @ViewBag.evnt</h1>
+                <h3> @ViewBag.warning</h3>
+                <h3><marquee behavior="scroll" direction="left">@ViewBag.counties</marquee></h3>
+            </div>
+
+            <div class="bottom-left">
+
+                @if (@ViewBag.RainY > 0)
+                {
+                    <h2>Rain Yesterday: @ViewBag.RainY"</h2>
+                    ;
+                }
+
+                
+                Powered by Weatherflow Tempest mobile
+            </div>
+        </div>
+    </body>
+
+
